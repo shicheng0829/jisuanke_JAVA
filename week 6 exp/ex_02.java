@@ -1,5 +1,5 @@
 import java.util.*;
-public class ex_02{
+public class Main{
 	public static void main(String[] args)
 	{
 		Scanner input = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class ex_02{
 		{
 			if(num[i] == 0)
 				System.out.println(i);
-			for(int j = num[i] * 2; j <= N; j += num[i])
+			for(int j = i * 2; j <= N; j += i)
 				num[j] = 1;
 		}
 	}

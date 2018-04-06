@@ -8,7 +8,8 @@ public class Main{
 		int[] dp = new int[5000];
 		for(int i = 0; i < n; ++i)
 			num[i] = input.nextInt();
-		dp[0] = 1;
+		for(int i = 0; i < n; ++i)
+			dp[i] = 1;		
 		for(int i = 1; i < n; ++i)
 		{
 			int max = 0;
@@ -21,6 +22,13 @@ public class Main{
 			}
 			dp[i] = max + 1;
 		}
-		System.out.print(dp[n-1]);
+		int max = 0;
+		for(int i = 0; i < n; ++i)
+		{
+			if(dp[i] > max)
+			max = dp[i];
+		}
+
+		System.out.print(max);
 	}
 }
